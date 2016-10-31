@@ -23,7 +23,7 @@ jQuery(function($){
         if(vidLink.val()){
             if(youtubeURLRegex.test(vidLink.val())){
                 var matches = youtubeURLRegex.exec(vidLink.val());
-                newEmbedVal = "<iframe width='302' height='170' src='https://www.youtube.com/embed/" + matches[matches.length-1] + "?rel=0&showinfo=0' frameborder='0' allowfullscreen></iframe>";
+                newEmbedVal = "<iframe width='100%' height='100%' src='https://www.youtube.com/embed/" + matches[matches.length-1] + "?rel=0&showinfo=0' frameborder='0' allowfullscreen></iframe>";
                 vidContainer.html(newEmbedVal);
                 vidContainer.removeClass('no-video');
                 hiddenEmbedVal.attr('value', htmlEscape(newEmbedVal));
