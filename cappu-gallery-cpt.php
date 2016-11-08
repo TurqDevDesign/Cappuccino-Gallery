@@ -5,6 +5,7 @@ Description: Allows you to easily add videos and images to a gallery, and then u
 Version: 0.5
 License: GPLv3
 Plugin URI:
+GitHub Plugin URI: https://github.com/TurqDevDesign/Cappuccino-Gallery.git
 Author: Austin Fish
 Author URI:
 
