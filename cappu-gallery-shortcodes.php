@@ -60,9 +60,11 @@
             }
             /* End switching through options */
 
+            $output = '';
 
+            $output .= '<div class="gallery-container">';
 
-            echo '<div class="gallery-container">';
+            ob_start(); //Start output buffer
 
         	while ( $query->have_posts() ) {
         		$query->the_post();
@@ -77,13 +79,13 @@
                             <?php if( isset($post_meta['_gallery_image_attachment'][0]) &&
                                       !empty($post_meta['_gallery_image_attachment'][0])) :?>
                                 <div class="custom-gallery-image">
-                                    <img src="<?php echo wp_get_attachment_image_src($post_meta['_gallery_image_attachment'][0], 'large')[0]; ?>" alt="" />
+                                    <img src="<?php echo wp_get_attachment_image_src($post_meta['_gallery_image_attachment'][0], 'thumbnail')[0]; ?>" alt="" />
                                 </div>
                             <?php endif; ?>
                             <?php if( isset($post_meta['_gallery_embed_markup'][0]) &&
                                       !empty($post_meta['_gallery_embed_markup'][0])) :?>
                                 <div class="custom-gallery-video">
-                                    <?php echo html_entity_decode( $post_meta['_gallery_embed_markup'][0], ENT_QUOTES, 'UTF-8'); ?>
+                                    <iframe width='100%' height='100%' src='https://www.youtube.com/embed/<?php echo trim(html_entity_decode( $post_meta['_gallery_embed_markup'][0], ENT_QUOTES, 'UTF-8')); ?>?rel=0&showinfo=0' frameborder='0' allowfullscreen></iframe>
                                 </div>
                             <?php endif; ?>
                             <?php if( $title ) :?>
@@ -110,7 +112,13 @@
                 <?php
         	}
 
-            echo '</div>';
+            $output .= ob_get_clean(); //Now the while loop is finished, get the
+                                       //content of the output buffer and
+                                       //add it to $output
+
+            $output .= '</div>';
+
+            return $output;
 
         	/* Restore original Post Data */
         	wp_reset_postdata();
@@ -131,7 +139,8 @@
             'mobile-columns'    => cappu_gallery_get_option('column_count_mobile'),
             'sort-by'           => cappu_gallery_get_option('sorting_options'),
             'sorting-direction' => cappu_gallery_get_option('sorting_asc_desc'),
-            'category'          => 'all'
+            'gallery'           => 'all',
+            'category'          => '' //Alternate to 'gallery'
         ), $atts );
 
         //Preparing query to retrieve posts from database
@@ -167,9 +176,29 @@
             break;
         }
 
-		switch(strtolower($atts['category'])){
+		switch(strtolower($atts['gallery'])){
             case 'all':
                 //do Nothing
+            break;
+            default:
+                $query_args['tax_query'] = array(
+                    array(
+                        'taxonomy' => 'cappu-gallery-groups',
+                        'field' => 'slug',
+                        'terms' => $atts['gallery'],
+                    ),
+                );
+            break;
+        }
+
+        //In case users decide to use 'category' instead of 'gallery',
+        //'category' has a higher prescedence and overwrites 'gallery'
+		switch(strtolower($atts['category'])){
+            case '':
+                //Do nothing
+            break;
+            case 'all':
+                $query_args['tax_query'] = array();
             break;
             default:
                 $query_args['tax_query'] = array(

@@ -50,6 +50,12 @@ function cappu_gallery_help_page(){
 
         }
 
+        .cg-help-image {
+
+            max-width: 100%;
+            max-height: 150px;
+
+        }
     </style>
     <div class="wrap">
         <h1>Cappuccino Gallery Help</h1>
@@ -61,7 +67,15 @@ function cappu_gallery_help_page(){
             </div>
             <div class="help-section" id="adding_videos">
                 <h2>Adding Videos</h2>
-                <p>Help with adding videos.</p>
+                <p>Adding videos is simple, under <strong>Manage Gallery</strong>, on your sidebar, click <strong>Add new video</strong>. The new video interface will pop up, fill out all of the fields appropriately. </p>
+
+                <p><strong>Where to find video link.</strong></p>
+                <p>A video link can be obtained by simply visiting a youtube video and copying the text in the URL bar (highlighted below).</p>
+                <img class="cg-help-image" src="<?php echo plugins_url('images/url.png',__FILE__) ?>" alt="Where to find video URL.">
+                <p>Alternatively, if you have issues with the link in your URL bar, you can use the link provided under Youtube's share button. First, on a video page, click the share button (highlighted below).</p>
+                <img class="cg-help-image" src="<?php echo plugins_url('images/share-button.png',__FILE__) ?>" alt="Where to find video URL.">
+                <p>Next, making sure the 'share' tab is selected (it should have a red line under it), copy the link provided (highlighted below).</p>
+                <img class="cg-help-image" src="<?php echo plugins_url('images/share-link.png',__FILE__) ?>" alt="Where to find video URL.">
             </div>
             <div class="help-section" id="gallery_info">
                 <h2>Galleries</h2>
@@ -114,14 +128,14 @@ function cappu_gallery_help_page(){
                             <td><em>asc</em> or <em>desc</em></td>
                         </tr>
                         <tr>
-                            <td><em><strong>category          </strong></em></td>
+                            <td><em><strong>gallery          </strong></em></td>
                             <td>--&gt;</td>
                             <td><em>all</em> or any slug from the list of galleries you've created.</td>
                         </tr>
                     </tbody>
                 </table>
-                <p>As you may see, the <em>category</em> option is the only option not available on the settings page. This allows you to make multiple galleries and only print the one you want when calling the shortcode. </p>
-                <p>To add an option to the shortcode, simply write it in the form <em>[cappuccino_gallery&nbsp;&nbsp;option='value']</em>. For instance, if I wanted to show a gallery with a slug of <em>my-gallery</em>, and I didn't want to show the caption, I would write <em>[cappuccino_gallery&nbsp;&nbsp;category='my-gallery'&nbsp;&nbsp;caption='false']</em>. All other options will be decided by the defaults you've set on the settings page. </p>
+                <p>As you may see, the <em>gallery</em> option is the only option not available on the settings page. This allows you to have multiple galleries, but only print the one you want to show. </p>
+                <p>To add an option to the shortcode, simply write it in the form <em>[cappuccino_gallery&nbsp;&nbsp;option='value']</em>. For instance, if I wanted to show a gallery with a slug of <em>my-gallery</em>, and I didn't want to show the caption, I would write <em>[cappuccino_gallery&nbsp;&nbsp;gallery='my-gallery'&nbsp;&nbsp;caption='false']</em>. All other options will be decided by the defaults you've set on the settings page. </p>
             </div>
         </div>
 

@@ -6,7 +6,7 @@ jQuery(function($){
         vidContainer    = metaBox.find( '#video_holder'),
         hiddenEmbedVal  = metaBox.find( '#gallery_embed_id' ),
         loadedEmbedVal  = hiddenEmbedVal.val(),
-        newEmbedVal     = '',
+        valForEmbed     = '',
         youtubeURLRegex = /^(https?\:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/(watch\?v=)?(embed\/)?([\w\-]{11})(?!\w|\-)$/;
         //The above is to match most youtube URL variations
 
@@ -23,10 +23,10 @@ jQuery(function($){
         if(vidLink.val()){
             if(youtubeURLRegex.test(vidLink.val())){
                 var matches = youtubeURLRegex.exec(vidLink.val());
-                newEmbedVal = "<iframe width='100%' height='100%' src='https://www.youtube.com/embed/" + matches[matches.length-1] + "?rel=0&showinfo=0' frameborder='0' allowfullscreen></iframe>";
-                vidContainer.html(newEmbedVal);
+                valForEmbed = matches[matches.length-1];
+                vidContainer.html("<iframe width='100%' height='100%' src='https://www.youtube.com/embed/" + matches[matches.length-1] + "?rel=0&showinfo=0' frameborder='0' allowfullscreen></iframe>");
                 vidContainer.removeClass('no-video');
-                hiddenEmbedVal.attr('value', htmlEscape(newEmbedVal));
+                hiddenEmbedVal.attr('value', htmlEscape(valForEmbed));
 
             } else {
                 hiddenEmbedVal.attr('value', loadedEmbedVal);

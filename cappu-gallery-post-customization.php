@@ -78,7 +78,9 @@ function cappu_gallery_attach(){
                 <div class="video-holder <?php echo $embed ? ' ' : 'no-video'; ?>" id="video_holder">
                     <?php
                     if($embed){
-                        echo html_entity_decode($embed, ENT_QUOTES, 'UTF-8');
+                        ?>
+                        <iframe width='100%' height='100%' src='https://www.youtube.com/embed/<?php echo trim(html_entity_decode($embed, ENT_QUOTES, 'UTF-8')); ?>?rel=0&showinfo=0' frameborder='0' allowfullscreen></iframe>
+                        <?php
                     } else if(!$embed && !empty($vid_link) && isset($vid_link)){
                         echo "Invalid URL";
                     } else {
