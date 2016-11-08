@@ -1,0 +1,80 @@
+.cappu-gallery-metabox {
+
+    width: 100%;
+    height: auto;
+    display: table;
+
+}
+
+.cappu-gallery-metabox .cappu-gallery-option{
+
+    width: 100%;
+    height: auto;
+    display: table-row;
+
+}
+
+.cappu-gallery-metabox .cappu-gallery-option .option-title{
+
+    padding: 20px 20px 0 0;
+    display: table-cell;
+    font-weight: 700;
+    vertical-align: top;
+    width: 100px;
+
+}
+
+.cappu-gallery-metabox .cappu-gallery-option .option-value{
+
+    width: auto;
+    padding: 20px 0 0 0;
+    height: auto;
+    display: table-cell;
+    vertical-align: top;
+
+}
+
+.cappu-gallery-metabox .cappu-gallery-option .option-value input{
+
+    width: 100%;
+
+}
+
+.small {
+
+    font-size:12px;
+
+}
+
+.video-display {
+
+    width: 100%;
+    height: auto;
+    text-align: center;
+    text-align: moz-center;
+
+}
+
+.video-holder {
+
+    height: 170px;
+    width: auto;
+    min-width: 300px;
+    margin: 0 auto;
+    display: inline-block;
+    border: 1px solid lightgrey;
+    background: gainsboro;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 1em;
+    font-weight: normal;
+
+}
+
+.video-holder.no-video {
+
+    padding-top: 78px;
+    font-size: 1.2em;
+    font-weight: 700;
+
+}
