@@ -20,7 +20,7 @@ function cappu_gallery_attach(){
                 $img_id = get_post_meta( $post->ID, '_gallery_image_attachment', true );
 
                 // Get the image src
-                $img_src = wp_get_attachment_image_src( $img_id, 'full' );
+                $img_src = wp_get_attachment_image_src( $img_id, 'medium' );
 
                 // For convenience, see if the array is valid
                 $have_img = is_array( $img_src );
