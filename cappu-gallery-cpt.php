@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cappuccino Gallery
 Description: Allows you to easily add videos and images to a gallery, and then use a shortcode to display them on a page of your choice. Optionally include description/captions with each item displayed.
-Version: 0.6.05
+Version: 0.6.06
 License: GPLv3
 Plugin URI: https://github.com/TurqDevDesign/Cappuccino-Gallery.git
 GitHub Plugin URI: https://github.com/TurqDevDesign/Cappuccino-Gallery.git
@@ -30,8 +30,8 @@ This file is part of Cappuccino Gallery.
 */
 
 // Uncomment following 2 lines for debuggine
- error_reporting(E_ALL);
- ini_set('display_errors',1);
+// error_reporting(E_ALL);
+// ini_set('display_errors',1);
 
 //Exit if accessed directly - Preventing non-wordpress systems from running file.
 if(!defined('ABSPATH')) {

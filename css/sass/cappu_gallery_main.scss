@@ -1,5 +1,5 @@
 .gallery-container{
-    text-align:left;
+    text-align:center;
     font-size: 0;
     width: 100%;
     display: block;
@@ -113,7 +113,8 @@
 }
 
 @mixin grid-col {
-  float: left;
+  display: inline-block;
+  margin: 0;
   padding-right: 0.75em;
 }
 
