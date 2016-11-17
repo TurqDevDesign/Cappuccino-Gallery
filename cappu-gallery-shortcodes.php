@@ -12,53 +12,17 @@
             $subtitle = false;
             $caption = false;
 
-            /* Begin switching through options to set variables to know
-            how to display */
-            switch($atts['title']){
-                case '0':
-                case 0:
-                case false:
-                case 'false':
-                    $title = false;
-                break;
-                case '1':
-                case 1:
-                case true:
-                case 'true':
-                    $title = true;
-                break;
+            if($atts['title'] == 1 || $atts['title'] == 'true') {
+                $title = true;
             }
 
-    		switch($atts['subtitle']){
-                case '0':
-                case 0:
-                case false:
-                case 'false':
-                    $subtitle = false;
-                break;
-                case '1':
-                case 1:
-                case true:
-                case 'true':
-                    $subtitle = true;
-                break;
+            if($atts['subtitle'] == 1 || $atts['subtitle'] == 'true') {
+                $subtitle = true;
             }
-
-    		switch($atts['caption']){
-                case '0':
-                case 0:
-                case false:
-                case 'false':
-                    $caption = false;
-                break;
-                case '1':
-                case 1:
-                case true:
-                case 'true':
-                    $caption = true;
-                break;
+            
+            if($atts['caption'] == 1 || $atts['caption'] == 'true') {
+                $caption = true;
             }
-            /* End switching through options */
 
             $output = '';
 
