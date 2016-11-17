@@ -34,9 +34,10 @@
   transition: all .3s;
   height: 100%;
   font-size: 0;
+  padding-bottom: 7px;
   /* images inside wp-gallery */
 }
-/* line 31, ../sass/cappu_gallery_main.scss */
+/* line 32, ../sass/cappu_gallery_main.scss */
 .gallery-container .gallery-parent .custom-gallery-item .custom-gallery-image {
   width: 100%;
   height: auto;
@@ -44,7 +45,7 @@
   display: inline-block;
   position: relative;
 }
-/* line 37, ../sass/cappu_gallery_main.scss */
+/* line 38, ../sass/cappu_gallery_main.scss */
 .gallery-container .gallery-parent .custom-gallery-item .custom-gallery-image img {
   width: 100%;
   height: 100%;
@@ -57,13 +58,13 @@
   bottom: 0;
   right: 0;
 }
-/* line 49, ../sass/cappu_gallery_main.scss */
+/* line 50, ../sass/cappu_gallery_main.scss */
 .gallery-container .gallery-parent .custom-gallery-item .custom-gallery-image:after {
   content: "";
   display: block;
   padding-top: 100%;
 }
-/* line 55, ../sass/cappu_gallery_main.scss */
+/* line 56, ../sass/cappu_gallery_main.scss */
 .gallery-container .gallery-parent .custom-gallery-item .custom-gallery-video {
   width: 100%;
   height: auto;
@@ -71,7 +72,7 @@
   display: inline-block;
   position: relative;
 }
-/* line 61, ../sass/cappu_gallery_main.scss */
+/* line 62, ../sass/cappu_gallery_main.scss */
 .gallery-container .gallery-parent .custom-gallery-item .custom-gallery-video iframe {
   display: inline-block;
   position: absolute;
@@ -83,13 +84,13 @@
   max-width: 100%;
   max-height: 100%;
 }
-/* line 72, ../sass/cappu_gallery_main.scss */
+/* line 73, ../sass/cappu_gallery_main.scss */
 .gallery-container .gallery-parent .custom-gallery-item .custom-gallery-video:after {
   content: "";
   display: block;
   padding-top: 100%;
 }
-/* line 78, ../sass/cappu_gallery_main.scss */
+/* line 79, ../sass/cappu_gallery_main.scss */
 .gallery-container .gallery-parent .custom-gallery-item .custom-gallery-title {
   font-size: 16px;
   color: #1b1b1b;
@@ -99,7 +100,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 87, ../sass/cappu_gallery_main.scss */
+/* line 88, ../sass/cappu_gallery_main.scss */
 .gallery-container .gallery-parent .custom-gallery-item .custom-gallery-subtitle {
   font-size: 14px;
   color: #5c6b80;
@@ -108,7 +109,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 95, ../sass/cappu_gallery_main.scss */
+/* line 96, ../sass/cappu_gallery_main.scss */
 .gallery-container .gallery-parent .custom-gallery-item .custom-gallery-caption {
   font-size: 14px;
   padding: 7px 10px;
@@ -117,7 +118,7 @@
   background: transparent;
   color: #343434;
 }
-/* line 103, ../sass/cappu_gallery_main.scss */
+/* line 104, ../sass/cappu_gallery_main.scss */
 .gallery-container .gallery-parent .custom-gallery-item:hover {
   border: 1px solid #b6b6b6;
   cursor: pointer;
@@ -127,14 +128,14 @@
   transition: all .3s;
 }
 
-/* line 122, ../sass/cappu_gallery_main.scss */
+/* line 123, ../sass/cappu_gallery_main.scss */
 .last-col {
   float: right;
   padding-right: 0 !important;
 }
 
 @media (max-width: 767px) {
-  /* line 129, ../sass/cappu_gallery_main.scss */
+  /* line 130, ../sass/cappu_gallery_main.scss */
   .cg-m-1of1 {
     display: inline-block;
     margin: 0;
@@ -143,7 +144,7 @@
     padding-right: 0;
   }
 
-  /* line 135, ../sass/cappu_gallery_main.scss */
+  /* line 136, ../sass/cappu_gallery_main.scss */
   .cg-m-1of2 {
     display: inline-block;
     margin: 0;
@@ -151,7 +152,7 @@
     width: 50%;
   }
 
-  /* line 140, ../sass/cappu_gallery_main.scss */
+  /* line 141, ../sass/cappu_gallery_main.scss */
   .cg-m-1of3 {
     display: inline-block;
     margin: 0;
@@ -159,11 +160,11 @@
     width: 33.33%;
   }
 
-  /* line 146, ../sass/cappu_gallery_main.scss */
+  /* line 147, ../sass/cappu_gallery_main.scss */
   .gallery-container .gallery-parent {
     /* end .custom-gallery */
   }
-  /* line 148, ../sass/cappu_gallery_main.scss */
+  /* line 149, ../sass/cappu_gallery_main.scss */
   .gallery-container .gallery-parent .custom-gallery-item:hover {
     border: 1px solid #b6b6b6;
     cursor: pointer;
@@ -175,7 +176,7 @@
 }
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1029px) {
-  /* line 166, ../sass/cappu_gallery_main.scss */
+  /* line 167, ../sass/cappu_gallery_main.scss */
   .cg-t-1of1 {
     display: inline-block;
     margin: 0;
@@ -184,7 +185,7 @@
     padding-right: 0;
   }
 
-  /* line 172, ../sass/cappu_gallery_main.scss */
+  /* line 173, ../sass/cappu_gallery_main.scss */
   .cg-t-1of2 {
     display: inline-block;
     margin: 0;
@@ -192,7 +193,7 @@
     width: 50%;
   }
 
-  /* line 177, ../sass/cappu_gallery_main.scss */
+  /* line 178, ../sass/cappu_gallery_main.scss */
   .cg-t-1of3 {
     display: inline-block;
     margin: 0;
@@ -200,7 +201,7 @@
     width: 33.33%;
   }
 
-  /* line 182, ../sass/cappu_gallery_main.scss */
+  /* line 183, ../sass/cappu_gallery_main.scss */
   .cg-t-1of4 {
     display: inline-block;
     margin: 0;
@@ -208,7 +209,7 @@
     width: 25%;
   }
 
-  /* line 187, ../sass/cappu_gallery_main.scss */
+  /* line 188, ../sass/cappu_gallery_main.scss */
   .cg-t-1of5 {
     display: inline-block;
     margin: 0;
@@ -218,7 +219,7 @@
 }
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
-  /* line 196, ../sass/cappu_gallery_main.scss */
+  /* line 197, ../sass/cappu_gallery_main.scss */
   .cg-d-1of1 {
     display: inline-block;
     margin: 0;
@@ -227,7 +228,7 @@
     padding-right: 0;
   }
 
-  /* line 202, ../sass/cappu_gallery_main.scss */
+  /* line 203, ../sass/cappu_gallery_main.scss */
   .cg-d-1of2 {
     display: inline-block;
     margin: 0;
@@ -235,7 +236,7 @@
     width: 50%;
   }
 
-  /* line 207, ../sass/cappu_gallery_main.scss */
+  /* line 208, ../sass/cappu_gallery_main.scss */
   .cg-d-1of3 {
     display: inline-block;
     margin: 0;
@@ -243,7 +244,7 @@
     width: 33.33%;
   }
 
-  /* line 212, ../sass/cappu_gallery_main.scss */
+  /* line 213, ../sass/cappu_gallery_main.scss */
   .cg-d-1of4 {
     display: inline-block;
     margin: 0;
@@ -251,7 +252,7 @@
     width: 25%;
   }
 
-  /* line 216, ../sass/cappu_gallery_main.scss */
+  /* line 217, ../sass/cappu_gallery_main.scss */
   .cg-d-1of5 {
     display: inline-block;
     margin: 0;
@@ -259,7 +260,7 @@
     width: 20%;
   }
 
-  /* line 220, ../sass/cappu_gallery_main.scss */
+  /* line 221, ../sass/cappu_gallery_main.scss */
   .cg-d-1of6 {
     display: inline-block;
     margin: 0;
