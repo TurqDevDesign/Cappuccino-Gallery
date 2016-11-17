@@ -142,6 +142,20 @@
     width: 33.33%;
   }
 
+  .gallery-container{
+      .gallery-parent{
+          .custom-gallery-item{
+              &:hover {
+                  border: 1px solid #b6b6b6;
+                  cursor:pointer;
+                  -webkit-box-shadow: none;
+                  -moz-box-shadow: none;
+                  box-shadow: none;
+                  transition: all .3s;
+              }
+          } /* end .custom-gallery */
+      }
+  }
 
 } // end mobile styles
 
