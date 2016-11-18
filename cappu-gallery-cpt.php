@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cappuccino Gallery
 Description: Allows you to easily add videos and images to a gallery, and then use a shortcode to display them on a page of your choice. Optionally include description/captions with each item displayed.
-Version: 0.6.10
+Version: 0.6.11
 License: GPLv3
 Plugin URI: https://github.com/TurqDevDesign/Cappuccino-Gallery.git
 GitHub Plugin URI: https://github.com/TurqDevDesign/Cappuccino-Gallery.git
@@ -64,7 +64,7 @@ function cappu_gallery_registerImagePostType() {
 		'labels'              => $labels,
         'public'              => true,
         'publicly_queryable'  => true,
-        'exclude_from_search' => false,
+        'exclude_from_search' => true,
         'show_in_nav_menus'   => true,
         'show_ui'             => true,
         'show_in_menu'        => false,
@@ -120,7 +120,7 @@ function cappu_gallery_registerVideoPostType() {
 		'labels'              => $labels,
         'public'              => true,
         'publicly_queryable'  => true,
-        'exclude_from_search' => false,
+        'exclude_from_search' => true,
         'show_in_nav_menus'   => true,
         'show_ui'             => true,
         'show_in_menu'        => false,
