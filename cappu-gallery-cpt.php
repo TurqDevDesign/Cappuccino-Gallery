@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cappuccino Gallery
 Description: Allows you to easily add videos and images to a gallery, and then use a shortcode to display them on a page of your choice. Optionally include description/captions with each item displayed.
-Version: 0.6.12
+Version: 0.6.13
 License: GPLv3
 Plugin URI: https://github.com/TurqDevDesign/Cappuccino-Gallery.git
 GitHub Plugin URI: https://github.com/TurqDevDesign/Cappuccino-Gallery.git
@@ -29,7 +29,7 @@ This file is part of Cappuccino Gallery.
     along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-// Uncomment following 2 lines for debuggine
+// Uncomment following 2 lines for debugging
 // error_reporting(E_ALL);
 // ini_set('display_errors',1);
 
