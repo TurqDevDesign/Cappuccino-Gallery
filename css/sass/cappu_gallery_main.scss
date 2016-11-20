@@ -16,6 +16,11 @@
         display: inline-block;
         vertical-align: top;
         box-sizing: border-box;
+        a {
+            &:link {
+                text-decoration: none; 
+            }
+        }
         .custom-gallery-item{
             background: white;
             border-radius: 5px;

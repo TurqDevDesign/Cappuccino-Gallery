@@ -19,7 +19,7 @@
             if($atts['subtitle'] == 1 || $atts['subtitle'] == 'true') {
                 $subtitle = true;
             }
-            
+
             if($atts['caption'] == 1 || $atts['caption'] == 'true') {
                 $caption = true;
             }
@@ -39,6 +39,10 @@
 
         		?>
                     <div class="gallery-parent cg-d-1of<?php echo $d; ?> cg-t-1of<?php echo $t; ?> cg-m-1of<?php echo $m; ?>">
+                        <?php if( isset($post_meta['_gallery_image_attachment'][0]) &&
+                                  !empty($post_meta['_gallery_image_attachment'][0])) :?>
+                            <a href="<?php echo wp_get_attachment_url($post_meta['_gallery_image_attachment'][0]); ?>">
+                        <?php endif; ?>
                         <div class="custom-gallery-item">
                             <?php if( isset($post_meta['_gallery_image_attachment'][0]) &&
                                       !empty($post_meta['_gallery_image_attachment'][0])) :?>
@@ -72,6 +76,10 @@
                                 </div>
                         <?php endif; ?>
                         </div>
+                        <?php if( isset($post_meta['_gallery_image_attachment'][0]) &&
+                                  !empty($post_meta['_gallery_image_attachment'][0])) :?>
+                            </a>
+                        <?php endif; ?>
                     </div>
                 <?php
         	}
