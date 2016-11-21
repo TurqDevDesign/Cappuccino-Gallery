@@ -1,2 +1,2 @@
 # Cappuccino-Gallery
-Wordpress gallery plugin - from the Cappuccino series
+Wordpress gallery plugin - from the Café series
